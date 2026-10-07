@@ -121,6 +121,8 @@ nav button>img {
 }
 
 header {
+    display: flex;
+    flex-direction: column;
     background-color: var(--color-primary);
     padding: 1.25rem 0.9375rem 0;
     color: var(--color-invert);
@@ -189,8 +191,8 @@ header>div:last-child {
 
 header>div:last-child>img {
     max-width: none;
-    width: 152.22vw;
-    margin-left: -6.92vw;
+    width: 159.22vw;
+    margin-left: -12.92vw;
 }
 
 main section {
@@ -244,7 +246,6 @@ main section:nth-child(2) ul li p:first-child {
     font-style: normal;
     font-weight: 700;
     line-height: 106%;
-    text-align: center;
     color: var(--color-primary);
     font-size: 3.5rem;
     letter-spacing: -0.03em;
@@ -346,12 +347,84 @@ footer ul:last-of-type i {
 
 footer small {
     display: block;
-    font-size: 12px;
+    font-size: 0.75rem;
     line-height: 160%;
     color: var(--color-grey);
 }
 
 /* small screens iteration */
 @media screen and (width > 768px) and (width < 1024px) {
-    /* estilos para tablet */
+    header {
+        flex-direction: row;
+        background: url(../images/background-singup.png);
+        background-size: cover;
+        text-align: left;
+        padding: 3.125rem 0 9.375rem 1.875rem;
+        gap: 1.375rem;
+    }
+
+    header div:first-child {
+        flex: 1.5 1 0;
+    }
+
+    header div:last-child {
+        display: flex;
+        align-items: center;
+        flex: 1 1 0;
+        height: auto;
+        margin: 0;
+    }
+
+    header h1,
+    header p {
+        width: 80%;
+    }
+
+    header h1 {
+        font-size: 5.25rem;
+        text-align: left;
+    }
+
+    header p {
+        font-size: 22px;
+    }
+
+    header>div:last-child>img {
+        width: 80vw;
+        margin-left: 0;
+    }
+
+    main section,
+    footer {
+        padding: 3.125rem 1.875rem;
+    }
+
+    main section:nth-child(2) ul {
+        flex-direction: row;
+        padding: 0 1.25rem;
+        gap: 3rem;
+    }
+
+    main section:nth-child(2) li p {
+        text-align: left;
+    }
+
+    main section:last-child {
+        padding-right: 5.625rem;
+        padding-left: 5.625rem;
+    }
+
+    footer {
+        text-align: left;
+    }
+
+    footer ul:first-of-type {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    footer ul:last-of-type {
+        justify-content: left;
+        gap: 4.375rem;
+    }
 }
