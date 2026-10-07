@@ -352,14 +352,14 @@ footer small {
     color: var(--color-grey);
 }
 
-/* small screens iteration */
-@media screen and (width > 768px) and (width < 1024px) {
+/* iteration 2 - small screens */
+@media screen and (width > 768px) {
     header {
         flex-direction: row;
         background: url(../images/background-singup.png);
         background-size: cover;
         text-align: left;
-        padding: 3.125rem 0 9.375rem 1.875rem;
+        padding: 1.675rem 0 9.375rem 1.875rem;
         gap: 1.375rem;
     }
 
@@ -386,7 +386,7 @@ footer small {
     }
 
     header p {
-        font-size: 22px;
+        font-size: 1.375rem;
     }
 
     header>div:last-child>img {
@@ -426,5 +426,63 @@ footer small {
     footer ul:last-of-type {
         justify-content: left;
         gap: 4.375rem;
+    }
+}
+
+/* iteration 3 - medium screens */
+@media screen and (width > 1024px) {
+
+    nav div:first-child,
+    nav div:last-child {
+        display: flex;
+    }
+
+    nav div:first-child {
+        gap: 2.9375rem;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 1.875rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li {
+        white-space: nowrap;
+    }
+
+    nav a {
+        color: var(--color-invert);
+        text-decoration: none;
+    }
+
+    nav ul[hidden] li:last-child a {
+        font-family: "Acumin Pro SemiCond", sans-serif;
+        font-size: 1rem;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        border-radius: var(--border-radius-m);
+        background-color: var(--color-invert);
+        color: var(--color-primary);
+        padding: 0.625rem 1rem 0.75rem;
+    }
+
+    nav button:last-of-type {
+        display: none;
+    }
+
+    header div:first-child {
+        flex: 1 1 0;
+    }
+
+    header h1 {
+        width: 100%;
+        margin-bottom: 6rem;
+    }
+
+    header>div:last-child>img {
+        width: 60.5vw;
     }
 }
